@@ -26,3 +26,8 @@ if (myDivs.length > 0) {  //kollar efter element i myDivs.
      myDiv.textContent = 'Text för text'; //Ändrar eller sätter texten till vald text
 }
 
+//5, Skapar funktion för eventlyssnare
+function writeInConsole(event) {
+     console.log(event.target);
+}
+
