@@ -50,6 +50,6 @@ function writeInConsole(event) {
  
  // Lägg till eventlyssnaren till varje textfält
  textFieldsCollection.forEach(textField => {
-     textField.addEventListener('input', handleInputChange);
+     textField.addEventListener('input', inputFields);
  });
  
