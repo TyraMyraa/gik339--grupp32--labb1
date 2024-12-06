@@ -69,9 +69,5 @@ checkbox.addEventListener('change', function() {
  
 // Eventlyssnare till knappen
 button.addEventListener('click', function() {
-    const myDiv = document.querySelector('.myDiv');
-    if (myDiv) {
-        myDiv.remove();
-    }
-});
-
+     alert('Button clicked');
+ });
