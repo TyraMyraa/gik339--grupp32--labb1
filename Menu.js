@@ -27,7 +27,29 @@ if (myDivs.length > 0) {  //kollar efter element i myDivs.
 }
 
 //5, Skapar funktion för eventlyssnare
+// Definiera funktionen som ska fungera som eventlyssnare
 function writeInConsole(event) {
+     // Skriv ut avsändaren (target) till konsolen
      console.log(event.target);
-}
-
+ 
+     // Ta reda på inputfältets (target) name-attribut
+     const inputName = event.target.name;
+ 
+     // Kontrollera om name-attributet är "content"
+     if (inputName === "content") {
+         // Hämta div-elementet
+         const myDiv = document.querySelector('.myDiv');
+ 
+         // Sätt innehållet (value) från inputfältet till div-elementet
+         myDiv.innerHTML = event.target.value;
+     }
+ }
+ 
+ // Hämta alla textfält
+ const inputFields = document.querySelectorAll('input.textfield');
+ 
+ // Lägg till eventlyssnaren till varje textfält
+ textFieldsCollection.forEach(textField => {
+     textField.addEventListener('input', handleInputChange);
+ });
+ 
