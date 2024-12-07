@@ -5,9 +5,7 @@ document.body.style.backgroundColor = '#0e1424';
 const checkbox = document.getElementsByName('divStyle')[0];
 
 // Ändrar färg på checkboxen.
-if (checkbox) {
-    checkbox.style.outline = '3px solid #25555f';
-}
+checkbox.style.outline = '3px solid #25555f';
 
 // 4.2, Hämta alla textfält
 const textFieldsCollection = document.querySelectorAll('input.textfield');
@@ -41,11 +39,9 @@ function writeInConsole(event) {
         myDiv.innerHTML = event.target.value;
     }
 }
-// Hämta alla textfält
-const inputFields = document.querySelectorAll('input.textfield');
 
 // Eventlyssnaren till varje textfält
-inputFields.forEach(textField => {
+textFieldsCollection.forEach(textField => {
     textField.addEventListener('input', writeInConsole);
 });
 
@@ -66,7 +62,7 @@ checkbox.addEventListener('change', function() {
         myDiv.style.backgroundColor = '';
     }
 });
- 
+
 // Eventlyssnare till knappen
 button.addEventListener('click', function() {
     const myDiv = document.querySelector('.myDiv');
